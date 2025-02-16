@@ -21,7 +21,7 @@ export default function Projects() {
       technologies: ['Next.js', 'Tailwind CSS', 'WordPress'],
       githubLink: 'https://github.com/kapil220/travel',
       liveLink: 'https://dash-6svroxhk4-kapil220s-projects.vercel.app/',
-      image: '/Dash.png'
+      image: '/dash.png'
     },
     {
       title: 'Cryptocurrency Tracker',
