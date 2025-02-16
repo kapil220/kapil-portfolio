@@ -36,7 +36,7 @@ export default function About() {
     { name: 'VS Code', icon: <SiVscodium className="text-blue-500" /> },
   ];
   
-  // Updated function to use ReactNode instead of JSX.Element
+  // Render Skill Card
   const renderSkillCard = (title: string, skills: { name: string; icon: ReactNode }[]) => (
     <motion.div 
       whileHover={{ scale: 1.05 }} 
@@ -56,15 +56,16 @@ export default function About() {
   );
 
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-20 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="flex items-center text-2xl font-bold text-gray-200 mb-12">
+          {/* Section Title */}
+          <h2 className="flex items-center text-3xl font-extrabold text-gray-200 mb-12">
             <span className="text-accent mr-2">01.</span>
             About Me
             <span className="ml-4 h-px bg-gray-700 flex-grow" />
@@ -73,16 +74,16 @@ export default function About() {
           <div className="grid md:grid-cols-5 gap-12">
             {/* Left Section - About Text */}
             <div className="md:col-span-3 text-gray-400">
-              <p className="mb-4">
-                Hello! My name is Kapil, and I enjoy creating things that live on the internet.
-                My interest in web development started back in college when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML &amp; CSS!
+              <p className="mb-4 leading-relaxed">
+                Hey there! I’m <span className="text-accent font-semibold">Kapil</span>, a passionate front-end developer who loves crafting sleek and interactive web experiences.
+                My journey into coding started with customizing Tumblr themes in college, and ever since, I’ve been obsessed with blending design and functionality to build amazing digital products.
               </p>
-              <p className="mb-8">
-                Fast-forward to today, and I haveve had the privilege of working at various companies,
-                where I have honed my skills in modern web technologies and best practices.
+              <p className="mb-8 leading-relaxed">
+                Over the years, I’ve worked with startups, freelancers, and businesses, honing my skills in **React.js, Next.js, Tailwind CSS, and TypeScript.** 
+                My focus is on developing **user-friendly, accessible, and high-performance websites.**
               </p>
 
-              <p className="mb-4">Here are a few technologies I haveve been working with recently:</p>
+              <p className="mb-4 font-medium text-gray-300">Here are a few technologies I’ve been working with recently:</p>
 
               {/* Skill Cards */}
               <div className="grid md:grid-cols-3 gap-6">
@@ -93,13 +94,19 @@ export default function About() {
             </div>
 
             {/* Right Section - Image */}
-            <div className="md:col-span-2 relative group">
-              <div className="relative w-64 h-64 mx-auto">
+            <div className="md:col-span-2 relative group flex justify-center">
+              <div className="relative w-64 h-64">
                 <Image
                   src="/kapil.jpeg"
                   alt="Kapil Singh Rajput"
                   fill
-                  className="rounded object-cover grayscale group-hover:grayscale-0 transition-all"
+                  className="rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all border-4 border-gray-700 shadow-xl"
+                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileHover={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0 bg-black bg-opacity-50 rounded-lg group-hover:opacity-0 transition-all"
                 />
               </div>
             </div>

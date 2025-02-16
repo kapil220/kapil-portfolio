@@ -16,9 +16,9 @@ export default function Experience() {
       ]
     },
     {
-        company: 'Homeiy Automations',
-        position: 'Freelance Front-End Developer',
-        period: 'Sept 2024 - Jan 2025',
+        company: 'Freelance',
+        position: 'Front-End Developer',
+        period: 'Sept 2024 - current',
         points: [
           'Spearheaded front-end optimization for client websites, boosting user engagement by 20%',
           'Collaborated with senior developers to design reusable code and libraries',
