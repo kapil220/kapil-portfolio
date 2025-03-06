@@ -79,8 +79,8 @@ export default function About() {
                 My journey into coding started with customizing Tumblr themes in college, and ever since, I’ve been obsessed with blending design and functionality to build amazing digital products.
               </p>
               <p className="mb-8 leading-relaxed">
-                Over the years, I’ve worked with startups, freelancers, and businesses, honing my skills in **React.js, Next.js, Tailwind CSS, and TypeScript.** 
-                My focus is on developing **user-friendly, accessible, and high-performance websites.**
+                Over the years, I’ve worked with startups, freelancers, and businesses, honing my skills in React.js, Next.js, Tailwind CSS, and TypeScript.
+                My focus is on developing user-friendly, accessible, and high-performance websites.
               </p>
 
               <p className="mb-4 font-medium text-gray-300">Here are a few technologies I’ve been working with recently:</p>

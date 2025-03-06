@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <main className="bg-black text-white relative">
       {/* Social Links (Left Side) */}
-      <div className="fixed left-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50">
+      <div className="fixed left-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50 hidden md:flex">
+
         <a href="https://github.com/kapil220" target="_blank">
           <FaGithub className="text-gray-300 hover:text-white text-2xl transition-transform hover:scale-110" />
         </a>

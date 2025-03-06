@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://github.com/kapil220"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-accent transition-colors"
+          className="hover:text-accent transition-colors hover:text-gray-200"
         >
           <Github className="w-5 h-5" />
 
@@ -18,13 +18,13 @@ export default function Footer() {
           href="https://linkedin.com/in/kapil8361"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-accent transition-colors"
+          className="hover:text-accent transition-colors hover:text-gray-200"
         >
           <Linkedin className="w-5 h-5" />
         </a>
         <a
           href="mailto:kapilrajput8361@gmail.com"
-          className="hover:text-accent transition-colors"
+          className="hover:text-accent transition-colors hover:text-gray-200"
         >
           <Mail className="w-5 h-5" />
         </a>

@@ -8,9 +8,17 @@ import Image from 'next/image';
 export default function Projects() {
   const projects = [
     {
+      title: 'The Ink Pot Group website',
+      description: 'Responsive and performant websites for business.',
+      technologies: ['Next.js', 'Tailwind CSS',],
+      githubLink: 'https://github.com/kapil220/abc',
+      liveLink: 'https://www.theinkpotgroup.com/',
+      image: '/inkpot.png'
+    },
+    {
       title: 'Travel Agency Website',
       description: 'Responsive and performant websites for various business domains.',
-      technologies: ['Next.js', 'Tailwind CSS', 'WordPress'],
+      technologies: ['Next.js', 'Tailwind CSS', ],
       githubLink: 'https://github.com/kapil220/travel',
       liveLink: 'https://travel-etsourmim-kapil220s-projects.vercel.app/',
       image: '/buisness.jpeg'
@@ -18,7 +26,7 @@ export default function Projects() {
     {
       title: 'Dashboard',
       description: 'Userr Dashboard for traking expense, activities and more.',
-      technologies: ['Next.js', 'Tailwind CSS', 'WordPress'],
+      technologies: ['Next.js', 'Tailwind CSS', ],
       githubLink: 'https://github.com/kapil220/travel',
       liveLink: 'https://dash-6svroxhk4-kapil220s-projects.vercel.app/',
       image: '/dash.png'

@@ -50,7 +50,7 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border-l-2 border-accent pl-8 relative"
+                className="border-r-2 border-accent pl-8 relative"
               >
                 <div className="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-0" />
                 <h3 className="text-xl font-bold text-gray-200 mb-1">{exp.position}</h3>
