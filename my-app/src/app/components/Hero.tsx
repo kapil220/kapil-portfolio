@@ -50,7 +50,7 @@ export default function Hero() {
   );
 
   return (
-    <section className="relative min-h-screen flex items-center bg-black text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-black text-white overflow-hidden pt-16 md:pt-0">
       {/* Abstract background elements */}
       <div className="absolute inset-0 opacity-20">
         <motion.div 
@@ -92,14 +92,14 @@ export default function Hero() {
         transition={{ type: "spring", damping: 15 }}
       />
 
-      <div className="max-w-6xl mx-auto px-6 z-10">
+      <div className="max-w-6xl mx-auto px-6 z-10 w-full">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <motion.p 
-            className="text-accent text-lg tracking-widest mb-4 font-mono"
+            className="text-accent text-sm sm:text-lg tracking-widest mb-2 sm:mb-4 font-mono"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -107,7 +107,7 @@ export default function Hero() {
             Hi, my name is
           </motion.p>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 overflow-hidden">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 overflow-hidden">
             <motion.span 
               className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 inline-block"
               initial={{ y: 100 }}
@@ -118,7 +118,7 @@ export default function Hero() {
             </motion.span>
           </h1>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-300 mb-6 overflow-hidden">
+          <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-gray-300 mb-4 sm:mb-6 overflow-hidden">
             <StaggeredText 
               text="I craft immersive web experiences."
               className="bg-gradient-to-r from-gray-100 to-gray-400 text-transparent bg-clip-text"
@@ -126,7 +126,7 @@ export default function Hero() {
           </h2>
 
           <motion.p
-            className="max-w-2xl text-gray-400 text-lg mb-12"
+            className="max-w-2xl text-gray-400 text-base sm:text-lg mb-8 sm:mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -135,14 +135,14 @@ export default function Hero() {
             Currently, I&#39;m focused on building accessible, high-performance, and visually captivating web applications.
           </motion.p>
           
-          <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <motion.a
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="inline-block px-8 py-4 text-lg font-semibold bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center"
+              className="inline-block px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
@@ -156,7 +156,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="inline-block px-8 py-4 text-lg font-semibold border-2 border-purple-500 text-white rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center"
+              className="inline-block px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold border-2 border-purple-500 text-white rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
