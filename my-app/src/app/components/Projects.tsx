@@ -14,7 +14,7 @@ const projects = [
     githubLink: 'https://github.com/kapil220/abc',
     liveLink: 'https://www.theinkpotgroup.com/',
     image: '/inkpot.png',
-    category: 'Business',
+    category: 'Portfolio Website',
     highlight: 'Performance'
   },
    {
@@ -24,7 +24,7 @@ const projects = [
   
     liveLink: 'https://www.rpa.international/',
     image: '/rpa.jpeg',
-    category: 'Business',
+    category: 'Portfolio Website',
     highlight: 'Automation'
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     
     liveLink: 'https://homeifyautomation.com/',
     image: '/homeify.jpeg',
-    category: 'IoT',
+    category: 'Portfolio Website',
     highlight: 'Smart Technology'
   },
   {
@@ -54,7 +54,7 @@ const projects = [
     githubLink: '',
     liveLink: 'https://ind.chinabistro.co/',
     image: '/china.jpeg',
-    category: 'Restaurant',
+    category: 'E-commerce',
     highlight: 'Online Ordering'
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     githubLink: '',
     liveLink: 'http://3.108.23.172:3005/',
     image: '/car.jpeg',
-    category: 'Full-stack',
+    category: 'E-commerce',
     highlight: 'Custom Backend'
   },
   {
@@ -74,7 +74,7 @@ const projects = [
   
     liveLink: 'https://travel-fawn-one.vercel.app/',
     image: '/buisness.jpeg',
-    category: 'Travel',
+    category: 'Portfolio Website',
     highlight: 'Design'
   },
   {
@@ -121,10 +121,10 @@ const projects = [
   // Get unique categories
   const categories = ['All', ...new Set(projects.map(project => project.category))];
   
-  // Filtered projects
-  const filteredProjects = filterCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === filterCategory);
+// Filtered projects
+const filteredProjects = filterCategory === 'All' 
+  ? projects 
+  : projects.filter(project => project.category === filterCategory);
 
   useEffect(() => {
     // Reset current index when changing filters
@@ -141,20 +141,20 @@ const projects = [
     return () => clearInterval(interval);
   }, [isAutoPlaying, currentIndex, filteredProjects.length]);
 
-  const nextSlide = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev < filteredProjects.length - 1 ? prev + 1 : 0));
-  };
+const nextSlide = () => {
+  setDirection(1);
+  setCurrentIndex((prev) => (prev < filteredProjects.length - 1 ? prev + 1 : 0));
+};
 
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : filteredProjects.length - 1));
-  };
+const prevSlide = () => {
+  setDirection(-1);
+  setCurrentIndex((prev) => (prev > 0 ? prev - 1 : filteredProjects.length - 1));
+};
 
-  const goToSlide = (index: number) => {
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
-  };
+const goToSlide = (index: number) => {
+  setDirection(index > currentIndex ? 1 : -1);
+  setCurrentIndex(index);
+};
 
   // Touch and drag handlers
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -377,19 +377,19 @@ const projects = [
                 <ChevronLeft className="w-5 h-5 text-white" />
               </motion.button>
               
-              <div className="flex gap-2">
-                {filteredProjects.map((_, index) => (
-                  <motion.button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentIndex === index ? 'w-8 bg-accent' : 'bg-gray-600'
-                    }`}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.8 }}
-                  />
-                ))}
-              </div>
+<div className="flex gap-2">
+  {filteredProjects.map((_, index) => (
+    <motion.button
+      key={index}
+      onClick={() => goToSlide(index)}
+      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+        currentIndex === index ? 'w-8 bg-accent' : 'bg-gray-600'
+      }`}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.8 }}
+    />
+  ))}
+</div>
               
               <motion.button 
                 onClick={nextSlide} 
