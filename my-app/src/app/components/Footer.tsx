@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="py-6 text-center text-gray-400">
+    <footer className="py-6 text-centerbg-gradient-to-b from-black to-gray-900">
       <div className="flex justify-center space-x-6 mb-4">
         <a
           href="https://github.com/kapil220"
