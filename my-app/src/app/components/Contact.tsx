@@ -39,7 +39,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <span className="text-accent mr-2">04.</span>
-            What's Next?
+            What&#39;s Next?
           </motion.h2>
           
           <motion.h3 
